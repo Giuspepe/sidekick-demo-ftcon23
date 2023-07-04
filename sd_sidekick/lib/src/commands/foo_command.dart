@@ -1,3 +1,4 @@
+import 'package:sd_sidekick/sd_sidekick.dart';
 import 'package:sidekick_core/sidekick_core.dart';
 
 class FooCommand extends Command {
@@ -11,7 +12,7 @@ class FooCommand extends Command {
   final String name = 'foo';
 
   @override
-  String get invocation => 'foo [--mode] [path]';
+  String get invocation => 'foo [--mode] [--[no-]format] [path]';
 
   FooCommand() {
     argParser.addOption(
@@ -20,6 +21,11 @@ class FooCommand extends Command {
       help: 'Whether to count lines or characters',
       allowed: ['lines', 'chars'],
       defaultsTo: 'lines',
+    );
+    argParser.addFlag(
+      'format',
+      abbr: 'f',
+      help: 'Whether to format before counting',
     );
   }
 
@@ -38,6 +44,11 @@ class FooCommand extends Command {
       print(red('There are no Dart files in ${baseDirectory.path} :('));
       exitCode = 13;
       return;
+    }
+
+    final bool format = argResults!['format'] as bool;
+    if (format) {
+      runSd(['format']);
     }
 
     final int count = switch (mode) {
