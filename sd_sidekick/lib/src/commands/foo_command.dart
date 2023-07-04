@@ -1,4 +1,3 @@
-import 'package:sd_sidekick/sd_sidekick.dart';
 import 'package:sidekick_core/sidekick_core.dart';
 
 class FooCommand extends Command {
@@ -48,7 +47,12 @@ class FooCommand extends Command {
 
     final bool format = argResults!['format'] as bool;
     if (format) {
-      runSd(['format']);
+      // `progress` captures command output (stdout, exit code, ...)
+      '${SidekickContext.entryPoint.path} format'.start(
+        progress: Progress.devNull(),
+      );
+      // This also works, but it's not as easy to capture its output
+      // runSd(['format']);
     }
 
     final int count = switch (mode) {
