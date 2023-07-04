@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="debug FooCommand" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+    <option name="arguments" value="foo lib" />
+    <option name="filePath" value="$PROJECT_DIR$/sd_sidekick/bin/main.dart" />
+    <option name="workingDirectory" value="$PROJECT_DIR$/sd_sidekick" />
+    <method v="2" />
+  </configuration>
+</component>

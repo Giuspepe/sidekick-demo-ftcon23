@@ -1,3 +1,4 @@
+import 'package:sd_sidekick/sd_sidekick.dart';
 import 'package:sidekick_core/sidekick_core.dart';
 import 'package:test/test.dart';
 
