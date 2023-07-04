@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:sd_sidekick/src/commands/clean_command.dart';
 import 'package:sidekick_core/sidekick_core.dart';
+import 'package:sd_sidekick/src/commands/foo_command.dart';
 
 Future<void> runSd(List<String> args) async {
   final runner = initializeSidekick(
@@ -14,7 +15,8 @@ Future<void> runSd(List<String> args) async {
     ..addCommand(CleanCommand())
     ..addCommand(DartAnalyzeCommand())
     ..addCommand(FormatCommand())
-    ..addCommand(SidekickCommand());
+    ..addCommand(SidekickCommand())
+    ..addCommand(FooCommand());
 
   try {
     return await runner.run(args);
