@@ -10,6 +10,8 @@ executables:
   main:
 
 dependencies:
+  baz:
+    path: /Users/pepe/repos/sidekick_demo/baz
   sidekick_core: ^2.0.4
   sidekick_vault: ^1.1.0
 

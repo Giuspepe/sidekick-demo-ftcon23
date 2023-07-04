@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:baz/baz.dart';
 import 'package:sd_sidekick/src/commands/clean_command.dart';
 import 'package:sd_sidekick/src/vault.dart';
 import 'package:sidekick_core/sidekick_core.dart';
@@ -19,6 +20,7 @@ Future<void> runSd(List<String> args) async {
     ..addCommand(FormatCommand())
     ..addCommand(SidekickCommand())
     ..addCommand(FooCommand())
+    ..addCommand(BazCommand())
     ..addCommand(VaultCommand(vault: vault));
 
   try {
