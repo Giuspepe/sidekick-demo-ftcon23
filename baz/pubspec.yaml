@@ -1,0 +1,13 @@
+name: baz
+description: Generated sidekick plugin (template shared-command)
+version: 0.0.1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  sidekick_core: ^2.0.0
+
+dev_dependencies:
+  lint: ^2.0.0
+  sidekick_plugin_installer: ^1.1.0
