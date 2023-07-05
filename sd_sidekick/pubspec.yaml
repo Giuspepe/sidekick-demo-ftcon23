@@ -11,6 +11,7 @@ executables:
 
 dependencies:
   sidekick_core: ^2.0.4
+  sidekick_vault: ^1.1.0
 
 dev_dependencies:
   lint: ^2.0.0

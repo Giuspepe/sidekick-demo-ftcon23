@@ -1,0 +1,8 @@
+# Ignore everything in this folder which isn't gpg encrypted
+*
+!*.gpg
+
+# Exceptions
+!README.md
+!.gitignore
+      
